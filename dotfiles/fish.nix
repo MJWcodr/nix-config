@@ -33,6 +33,7 @@
     mv = "mv -i";
     rcm = "rclone mount cryptdrive: ~/Cryptdrive --vfs-cache-mode=full --allow-other --buffer-size 32M --config /home/matthias/.config/rclone/rclone.conf --password-command 'pass rclone/config_password' &";
     mkdir = "mkdir -p";
+    hms = "home-manager switch -f nix-config/home.nix";
   };
   functions = {
     # all fish functions
