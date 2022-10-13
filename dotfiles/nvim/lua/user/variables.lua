@@ -10,10 +10,13 @@ set.expandtab = true
 set.autochdir = true
 
 -- change leader key to "<Space>"
-vim.g.mapleader = ","
+vim.g.mapleader = "<Space>"
 
 -- show line numbers
 set.number = true
 
 -- show relative line numbers
 set.relativenumber = true
+
+-- show cursor line
+set.cursorline = true

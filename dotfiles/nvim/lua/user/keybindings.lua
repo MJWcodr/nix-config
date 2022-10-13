@@ -31,5 +31,8 @@ map("i", "<C-Space>", "compe#complete()", { expr = true })
 -- Map keybindings for telescope
 map("n", "<C-f>", ":Telescope find_files<CR>")
 
+-- Map keybindings for "bufferline"
+
+
 -- Map keybindings for nvim-tree
 map("n", "<C-n>", ":NvimTreeToggle<CR>")

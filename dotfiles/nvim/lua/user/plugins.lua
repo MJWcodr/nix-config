@@ -31,21 +31,20 @@ packer.init({
   }
 )
 
+-- Set the compile path for packer
+
+
 -- Install your plugins here
 return packer.startup(function(use)
   -- basic plugins
   use 'wbthomason/packer.nvim' -- Have packer manage itself
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
-  use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
+  use "nvim-lua/plenary.nvim" -- Useful lua functions used by lots of plugins
   use "github/copilot.vim" -- Copilot is a vim plugin, that generates auto-completion suggestions for you
   use "nvim-lua/completion-nvim" -- Completion for Neovim
   use "nvim-lua/telescope.nvim" -- A vim plugin for exploring and navigating files and directories
-  use "kassio/neoterm" --  Wrapper of some vim/neovim's :terminal functions.
   use "nvim-treesitter/nvim-treesitter" -- A vim plugin for syntax highlighting and code navigation
-  use "rhysd/clever-split.vim" -- A vim plugin for splitting windows
-  use "SirVer/ultisnips" -- A vim plugin for snippets
   use "junegunn/fzf.vim" -- A vim plugin for fuzzy finder
-  use "LnL7/vim-nix" -- A vim plugin for nix
   
   -- code completion
   use "neovim/nvim-lspconfig" -- LSP configuration for Neovim
@@ -55,13 +54,26 @@ return packer.startup(function(use)
   use 'hrsh7th/cmp-cmdline' -- LSP completion for command line
   use 'hrsh7th/nvim-cmp' -- LSP completion for Neovim
   use "simrat39/rust-tools.nvim" -- Rust tools for Neovim
-  use "quangnguyen30192/cmp-nvim-ultisnips" -- Ultisnips for CMP
   
-  -- add spell checking
-  use "lewis6991/spellsitter.nvim" -- A vim plugin for spell checking
+  -- Smooth scrolling
+  use "karb94/neoscroll.nvim" -- Smooth scrolling for Neovim
+  
+ -- Spellchecking
+  use "vigoux/LanguageTool.nvim" -- Language Tool
+
+  -- Status line
+  use "glepnir/galaxyline.nvim" -- A vim plugin for status line
+
+  -- Git integration
+  use "tpope/vim-fugitive" -- A vim plugin for git
+  
+  -- Add Tabs at the top
+  use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
+  vim.opt.termguicolors = true
+  require("bufferline").setup{}
 
 
-  -- colorscheme
+  -- Color Scheme
   use({
   	'projekt0n/github-nvim-theme',
 	  config = function()
@@ -69,10 +81,13 @@ return packer.startup(function(use)
 	    })
 	  end
   })
-
+  
   -- setup nvim tree
   use "kyazdani42/nvim-tree.lua" -- A file explorer for Neovim
   require("nvim-tree").setup()
+
+  -- Icons for nvim tree
+  use "kyazdani42/nvim-web-devicons" -- Icons for Neovim
 
   -- setup asychronous LSP
   use "w0rp/ale" -- Asynchronous Lint Engine

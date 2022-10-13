@@ -14,4 +14,3 @@ require("user.variables")
 -- set user keybindings
 require("user.keybindings")
 
-

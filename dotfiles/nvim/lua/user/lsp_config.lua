@@ -1,3 +1,4 @@
+-- Configuration for the language server protocol
 lspconfig = require'lspconfig'
 completion_callback = require'completion'.on_attach
 
