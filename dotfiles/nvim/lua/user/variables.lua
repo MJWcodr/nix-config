@@ -10,7 +10,7 @@ set.expandtab = true
 set.autochdir = true
 
 -- change leader key to "<Space>"
-vim.g.mapleader = "<Space>"
+vim.g.mapleader = " "
 
 -- show line numbers
 set.number = true

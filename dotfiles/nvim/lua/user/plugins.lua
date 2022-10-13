@@ -66,8 +66,13 @@ return packer.startup(function(use)
   -- Status line
   use "glepnir/galaxyline.nvim" -- A vim plugin for status line
 
-  -- Git integration
-  use "tpope/vim-fugitive" -- A vim plugin for git
+  -- Add Markdown support
+  -- install without yarn or npm
+  use({
+    "iamcco/markdown-preview.nvim",
+    run = function() vim.fn["mkdp#util#install"]() end,
+  })
+  use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })  
   
   -- Add Tabs at the top
   use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
@@ -102,7 +107,8 @@ return packer.startup(function(use)
   vim.g.ale_linters = {
     javascript = {'eslint'},
     typescript = {'eslint'},
-    lua = {'luacheck'}
+    lua = {'luacheck'},
+    markdown = {'markdownlint', 'write-good'},
   }
 
   vim.g.ale_fix_on_save = 1
