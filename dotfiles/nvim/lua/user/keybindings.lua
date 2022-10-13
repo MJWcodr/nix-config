@@ -32,7 +32,12 @@ map("i", "<C-Space>", "compe#complete()", { expr = true })
 map("n", "<C-f>", ":Telescope find_files<CR>")
 
 -- Map keybindings for "bufferline"
-
+map("n", "<Tab>", ":BufferLineCycleNext<CR>")
+map("n", "<S-Tab>", ":BufferLineCyclePrev<CR>")
+map("n", "<leader>1", ":BufferLineGoToBuffer 1<CR>")
+map("n", "<leader>2", ":BufferLineGoToBuffer 2<CR>")
+map("n", "<leader>3", ":BufferLineGoToBuffer 3<CR>")
+map("n", "<leader>4", ":BufferLineGoToBuffer 4<CR>")
 
 -- Map keybindings for nvim-tree
 map("n", "<C-n>", ":NvimTreeToggle<CR>")

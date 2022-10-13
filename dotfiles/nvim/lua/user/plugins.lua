@@ -32,7 +32,7 @@ packer.init({
 )
 
 -- Set the compile path for packer
-
+packer.reset("compile_path", fn.stdpath("config").."$DOTFILES/nvim/plugin/packer_compiled.lua")
 
 -- Install your plugins here
 return packer.startup(function(use)
@@ -54,7 +54,18 @@ return packer.startup(function(use)
   use 'hrsh7th/cmp-cmdline' -- LSP completion for command line
   use 'hrsh7th/nvim-cmp' -- LSP completion for Neovim
   use "simrat39/rust-tools.nvim" -- Rust tools for Neovim
+  use "onsails/lspkind-nvim" -- VSCode like pictograms for Neovim lsp completion items
   
+  -- Snippets
+  use "SirVer/ultisnips" -- UltiSnips - The ultimate snippet solution for Vim
+  let g:UltiSnipsExpandTrigger="<C-l>"
+  let g:UltiSnipsJumpForwardTrigger="<C-l>"
+  let g:UltiSnipsJumpBackwardTrigger="<C-h>"
+
+
+  -- Nix support
+  use "LnL7/vim-nix" -- Vim syntax highlighting for Nix
+
   -- Smooth scrolling
   use "karb94/neoscroll.nvim" -- Smooth scrolling for Neovim
   
