@@ -14,12 +14,6 @@ map("t", "<Esc>", "<C-\\><C-n>")
 -- open terminal in normal mode
 map("n", "<leader>t", ":sp | terminal<CR>")
 
--- Map keybindings for normal mode navigation
--- map("n", "<UP>", "<Nop>")
--- map("n", "<DOWN>", "<Nop>")
--- map("n", "<LEFT>", "<Nop>")
--- map("n", "<RIGHT>", "<Nop>")
-
 -- Map keybindings for completion
 -- control + j/k to navigate completion menu
 map("i", "<C-j>", "pumvisible() ? \"\\<C-n>\" : \"\\<C-j>\"", { expr = true })
