@@ -68,10 +68,6 @@ return packer.startup(function(use)
 
   -- Add Markdown support
   -- install without yarn or npm
-  use({
-    "iamcco/markdown-preview.nvim",
-    run = function() vim.fn["mkdp#util#install"]() end,
-  })
   use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })  
   
   -- Add Tabs at the top
@@ -79,6 +75,9 @@ return packer.startup(function(use)
   vim.opt.termguicolors = true
   require("bufferline").setup{}
 
+  -- Add Leap Motion support
+  use "ggandor/leap.nvim" -- A vim plugin for fast cursor movement
+  require("leap").add_default_mappings()
 
   -- Color Scheme
   use({
@@ -99,16 +98,17 @@ return packer.startup(function(use)
   -- setup asychronous LSP
   use "w0rp/ale" -- Asynchronous Lint Engine
   vim.g.ale_fixers = {
-    ['*'] = {'remove_trailing_lines', 'trim_whitespace'},
+    ['*'] = {'remove_trailing_lines'},
     javascript = {'prettier', 'eslint'},
     typescript = {'prettier', 'eslint'},
-    lua = {'luafmt'}
+    lua = {'luafmt'},
+    markdown = {'prettier'},
   }
   vim.g.ale_linters = {
     javascript = {'eslint'},
     typescript = {'eslint'},
     lua = {'luacheck'},
-    markdown = {'markdownlint', 'write-good'},
+    markdown = {'mdl', 'writegood'},
   }
 
   vim.g.ale_fix_on_save = 1
@@ -143,7 +143,16 @@ cmp.setup({
     { name = 'buffer' },
     { name = 'nvim_lsp' },
     { name = 'ultisnips' },
-    { name = 'pylsp'}
+    { name = 'pylsp'},
+    { name = 'path' },
+    { name = 'markdownlint' },
+    { name = 'write-good' },
+    { name = 'luacheck' },
+    { name = 'luafmt' },
+    { name = 'prettier' },
+    { name = 'eslint' },
+    { name = 'remove_trailing_lines' },
+    { name = 'trim_whitespace' },
   },
 })
 

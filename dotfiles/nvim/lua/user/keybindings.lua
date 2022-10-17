@@ -47,11 +47,23 @@ map("n", "<A-Down>", ":wincmd J<CR>") -- move window below
 map("n", "<A-Left>", ":wincmd H<CR>") -- move window left
 map("n", "<A-Right>", ":wincmd L<CR>") -- move window right
 
--- Split window with arrow keys + ctrl
-map("n", "<C-Up>", ":wincmd s<CR>") -- split window vertically
-map("n", "<C-Down>", ":wincmd s<CR>") -- split window vertically
-map("n", "<C-Left>", ":wincmd v<CR>") -- split window horizontally
-map("n", "<C-Right>", ":wincmd v<CR>") -- split window horizontally
+-- Split window with arrow keys + ctrl + shift
+map("n", "<C-S-Up>", ":wincmd s<CR>") -- split window vertically
+map("n", "<C-S-Down>", ":wincmd s<CR>") -- split window vertically
+map("n", "<C-S-Left>", ":wincmd v<CR>") -- split window horizontally
+map("n", "<C-S-Right>", ":wincmd v<CR>") -- split window horizontally
+
+-- Resize window with arrow keys + ctrl
+map("n", "<C-Up>", ":resize +2<CR>") -- resize window up
+map("n", "<C-Down>", ":resize -2<CR>") -- resize window down
+map("n", "<C-Left>", ":vertical resize +2<CR>") -- resize window left
+map("n", "<C-Right>", ":vertical resize -2<CR>") -- resize window right
+
+
+-- Save file with ctrl + s
+map("n", "<C-s>", ":w<CR>") -- save file
+map("i", "<C-s>", "<Esc>:w<CR>i") -- save file
+
 
 -- Map keybindings for "nvim-tree"
 map("n", "<C-n>", ":NvimTreeToggle<CR>") -- toggle nvim-tree

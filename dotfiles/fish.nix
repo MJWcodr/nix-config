@@ -27,12 +27,14 @@
     set -x NIX_PATH nixpkgs=${pkgs.path}:$NIX_PATH:$HOME/.nix-defexpr/channels
     export NIX_PATH=$HOME/.nix-defexpr/channels:$NIX_PATH
     export DOTFILES=$HOME/.config/nixpkgs/dotfiles
+    export EDITOR=/usr/bin/nvim
     '';
-  shellAliases = {
-    rm = "rm -i";
-    cp = "cp -i";
-    mv = "mv -i";
-    rcm = "rclone mount cryptdrive: ~/Cryptdrive --vfs-cache-mode=full --allow-other --buffer-size 32M --config /home/matthias/.config/rclone/rclone.conf --password-command 'pass rclone/config_password' &";
+    shellAliases = {
+      nv = "nvim";
+      rm = "rm -i";
+      cp = "cp -i";
+      mv = "mv -i";
+      rcm = "rclone mount cryptdrive: ~/Cryptdrive --vfs-cache-mode=full --allow-other --buffer-size 32M --config /home/matthias/.config/rclone/rclone.conf --password-command 'pass rclone/config_password' &";
     mkdir = "mkdir -p";
     hms = "home-manager switch";
   };

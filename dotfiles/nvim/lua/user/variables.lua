@@ -20,3 +20,6 @@ set.relativenumber = true
 
 -- show cursor line
 set.cursorline = true
+
+-- set max width of line
+set.textwidth = 70
