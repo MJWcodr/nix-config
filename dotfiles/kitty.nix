@@ -1,5 +1,5 @@
 { config, pkgs, ... }:
 {
     # raw config files
-    home.file.".config/i3/".source = ./i3;
+    home.file.".config/kitty/".source = ./kitty;
 }

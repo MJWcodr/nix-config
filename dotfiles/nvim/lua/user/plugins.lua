@@ -67,7 +67,6 @@ return packer.startup(function(use)
   use "glepnir/galaxyline.nvim" -- A vim plugin for status line
 
   -- Add Markdown support
-  -- install without yarn or npm
   use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })  
   
   -- Add Tabs at the top
@@ -78,6 +77,9 @@ return packer.startup(function(use)
   -- Add Leap Motion support
   use "ggandor/leap.nvim" -- A vim plugin for fast cursor movement
   require("leap").add_default_mappings()
+  
+  -- Syntax highlighting for Kitty terminal
+  use "fladson/vim-kitty"
 
   -- Color Scheme
   use({
@@ -88,14 +90,14 @@ return packer.startup(function(use)
 	  end
   })
   
-  -- setup nvim tree
+  -- Setup nvim tree
   use "kyazdani42/nvim-tree.lua" -- A file explorer for Neovim
   require("nvim-tree").setup()
 
   -- Icons for nvim tree
   use "kyazdani42/nvim-web-devicons" -- Icons for Neovim
 
-  -- setup asychronous LSP
+  -- Setup asychronous LSP
   use "w0rp/ale" -- Asynchronous Lint Engine
   vim.g.ale_fixers = {
     ['*'] = {'remove_trailing_lines'},
