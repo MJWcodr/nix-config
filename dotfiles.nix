@@ -1,13 +1,19 @@
 { config, pkgs, ... }:
 {
   imports = [
-    ./dotfiles/nvim.nix
-    ./dotfiles/fish.nix
-    ./dotfiles/windowManager.nix
-    ./dotfiles/tmux.nix
-  ];
-  
 
+    # Fish config
+    ./dotfiles/fish.nix
+
+    # i3 config
+    ./dotfiles/windowManager.nix
+  ];
+
+  # Nvim config
+  home.file.".config/nvim/".source = ./dotfiles/nvim/;
+
+  # Tmux config
+  home.file.".tmux.conf".source = ./tmux.conf;
 
   programs.git = {
     enable = true;
