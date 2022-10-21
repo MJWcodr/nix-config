@@ -3,6 +3,8 @@
   imports = [
     ./dotfiles/nvim.nix
     ./dotfiles/fish.nix
+    ./dotfiles/windowManager.nix
+    ./dotfiles/tmux.nix
   ];
   
 

@@ -83,11 +83,11 @@ return packer.startup(function(use)
 
   -- Color Scheme
   use({
-  	'projekt0n/github-nvim-theme',
-	  config = function()
-	  require('github-theme').setup({
-	    })
-	  end
+  'projekt0n/github-nvim-theme',
+	config = function()
+	require('github-theme').setup({
+	})
+	end
   })
   
   -- Setup nvim tree
@@ -157,7 +157,7 @@ cmp.setup({
     { name = 'trim_whitespace' },
   },
 })
-
+  
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then

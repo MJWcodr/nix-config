@@ -29,7 +29,7 @@
     export NIX_PATH=$HOME/.nix-defexpr/channels:$NIX_PATH
     
     # run pywal
-    wal -i ~/Pictures/Webcam/background-photo.jpg
+    # wal -i ~/Pictures/Webcam/background-photo.jpg
     
     export DOTFILES=$HOME/.config/nixpkgs/dotfiles
     export EDITOR=/usr/bin/nvim
