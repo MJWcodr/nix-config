@@ -8,13 +8,17 @@
     # i3 config
     ./dotfiles/windowManager.nix
   ];
-
+  
   # Nvim config
   home.file.".config/nvim/".source = ./dotfiles/nvim;
 
   # Tmux config
   home.file.".tmux.conf".source = ./dotfiles/tmux.conf;
 
+  # kitty config
+  home.file.".config/kitty/".source = ./dotfiles/kitty;
+
+  # Git config
   programs.git = {
     enable = true;
     userName = "Matthias Wünsch";

@@ -31,7 +31,7 @@
     # run pywal
     # wal -i ~/Pictures/Webcam/background-photo.jpg
     
-    export DOTFILES=$HOME/.config/nixpkgs/dotfiles
+    export DOTFILES=$HOME/.config/nixpkgs/common/dotfiles
     export EDITOR=/usr/bin/nvim
     '';
     shellAliases = {
@@ -51,7 +51,9 @@
 
     ## Obsidian
     "obsidian" = "flatpak run md.obsidian.Obsidian"; # Obsidian
-
+    
+    ## icat
+    "icat" = "kitty +kitten icat"; # icat
   };
   functions = {
     # all fish functions

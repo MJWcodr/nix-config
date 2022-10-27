@@ -28,6 +28,6 @@
 
   # allow unfree packages
   nixpkgs.config.allowUnfree = true;
-
-  # enable services
+  
+  manual.manpages.enable = false;
 }

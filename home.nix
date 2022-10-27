@@ -8,9 +8,9 @@
   home.homeDirectory = "/home/matthias";
 
   # imports
-  imports = [ 
+  imports = [
+    ./mjw-mac/packages.nix
     ./common/dotfiles.nix
-    ./mjw-desktop/packages.nix
   ];
 
   # This value determines the Home Manager release that your
@@ -28,9 +28,6 @@
 
   # allow unfree packages
   nixpkgs.config.allowUnfree = true;
-
-  targets.genericLinux.enable = if pkgs.system == "x86_64-linux" then
-  true else false; # enable the genericLinux target if we're on x86_64-linux
-
-  # enable services
+  
+  manual.manpages.enable = false;
 }
