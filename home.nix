@@ -7,12 +7,10 @@
   home.username = "matthias";
   home.homeDirectory = "/home/matthias";
 
-
-
   # imports
-  imports = [
-    ./packages.nix
-    ./dotfiles.nix
+  imports = [ 
+    ./common/dotfiles.nix
+    ./mjw-desktop/packages.nix
   ];
 
   # This value determines the Home Manager release that your

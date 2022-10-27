@@ -20,6 +20,12 @@ git clone git@github.com:MJWcodr/nix-config.git ~/.config/nixpkgs
 
 ```
 
+**link proper home.nix**
+
+```
+ln mjw-desktop/home.nix home.nix
+```
+
 **link home-manager**
 
 ```bash
