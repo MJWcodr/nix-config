@@ -7,7 +7,10 @@
     jq # json parser
     bat # cat with syntax highlighting and Git integration
     exa # ls replacement
-    keepassxc # password manager
+    
+      # marked as broken
+      # keepassxc # password manager
+    
     xclip # clipboard
     htop # better top
     wget # for downloading files
