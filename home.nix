@@ -31,7 +31,8 @@
   # allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  targets.genericLinux.enable = true;
+  targets.genericLinux.enable = if pkgs.system == "x86_64-linux" then
+  true else false; # enable the genericLinux target if we're on x86_64-linux
 
   # enable services
 }
