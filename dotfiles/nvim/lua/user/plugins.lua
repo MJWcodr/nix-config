@@ -68,7 +68,14 @@ return packer.startup(function(use)
 
   -- Add Markdown support
   use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })  
-  
+
+  use({'jakewvincent/mkdnflow.nvim',
+    rocks = 'luautf8', -- Ensures optional luautf8 dependency is installed
+    config = function()
+        require('mkdnflow').setup({})
+    end
+}) -- Markdown flow
+
   -- Add Tabs at the top
   use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
   vim.opt.termguicolors = true
@@ -89,7 +96,7 @@ return packer.startup(function(use)
 	})
 	end
   })
-  
+
   -- Setup nvim tree
   use "kyazdani42/nvim-tree.lua" -- A file explorer for Neovim
   require("nvim-tree").setup()

@@ -22,4 +22,7 @@ set.relativenumber = true
 set.cursorline = true
 
 -- set max width of line
-set.textwidth = 70
+set.textwidth = 72
+
+-- use formatoptions to wrap text
+set.formatoptions = "tcqrn1"

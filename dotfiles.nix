@@ -10,10 +10,10 @@
   ];
 
   # Nvim config
-  home.file.".config/nvim/".source = ./dotfiles/nvim/;
+  home.file.".config/nvim/".source = ./dotfiles/nvim;
 
   # Tmux config
-  home.file.".tmux.conf".source = ./tmux.conf;
+  home.file.".tmux.conf".source = ./dotfiles/tmux.conf;
 
   programs.git = {
     enable = true;

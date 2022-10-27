@@ -35,6 +35,7 @@
     export EDITOR=/usr/bin/nvim
     '';
     shellAliases = {
+      # Shell Abbreviations
       nv = "nvim";
       rm = "rm -i";
       cp = "cp -i";
@@ -42,6 +43,15 @@
       rcm = "rclone mount cryptdrive: ~/Cryptdrive --vfs-cache-mode=full --allow-other --buffer-size 32M --config /home/matthias/.config/rclone/rclone.conf --password-command 'pass rclone/config_password' &";
     mkdir = "mkdir -p";
     hms = "home-manager switch";
+    
+    # Flatpaks
+
+    ## Spotify
+    "spotify" = "flatpak run com.spotify.Client"; # Spotify
+
+    ## Obsidian
+    "obsidian" = "flatpak run md.obsidian.Obsidian"; # Obsidian
+
   };
   functions = {
     # all fish functions
@@ -50,7 +60,7 @@
       body = ''
   figlet "mjw-desktop"
   echo ""
-  curl "wttr.in/Berlin?format=3"
+  # curl "wttr.in/Berlin?format=3" # removed because of quota issues
   echo ""
   fortune
         '';
