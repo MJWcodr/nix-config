@@ -19,10 +19,10 @@
     exa # ls
     cheat # cheatsheets
     tldr # cheatsheets
-      zoxide # cd
+    zoxide # cd
 
     pywal # color scheme generator
     
-
+    speedtest-cli # speedtest
   ];
 }

@@ -36,6 +36,7 @@
     '';
     shellAliases = {
       # Shell Abbreviations
+      ls = "exa";
       nv = "nvim";
       rm = "rm -i";
       cp = "cp -i";
