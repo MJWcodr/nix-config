@@ -130,18 +130,22 @@ return packer.startup(function(use)
   vim.g.ale_sign_style_warning = ''
   vim.g.ale_sign_style_info = ''
 
-  -- A startup screen for Neovim
-  use {
-    "startup-nvim/startup.nvim",
-    requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
-    config = function()
+  -- Go support
+  use 'ray-x/go.nvim' -- Go support for Neovim
+  use 'ray-x/lsp_signature.nvim' -- Show function signature
+  use 'ray-x/guihua.lua' -- float window manager
+  require('go').setup()
+    -- Autoformat Go
+    vim.cmd([[
+      augroup gofmt
+        autocmd!
+        autocmd BufWritePre *.go :silent! lua require('go.format').gofmt()
+      augroup END
+    ]])
 
-	require"startup".setup()
-    end
-  }
-
+  
   -- After packer
-  local cmp = require('cmp')
+local cmp = require('cmp')
 cmp.setup({
   mapping = {
     ['<C-Space>'] = cmp.mapping.complete(),
