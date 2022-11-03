@@ -8,7 +8,6 @@
     bat # cat with syntax highlighting and Git integration
     exa # ls replacement
     
-      # marked as broken
       # keepassxc # password manager
     
     xclip # clipboard
@@ -17,8 +16,7 @@
     curl # for downloading files
     zip # for zip/unzip
     unzip # unzip
-    neovim # editor
-    rclone # cloud storage
+    neovim rclone # cloud storage
     croc # file transfer
     syncthing # sync files between devices
     fd # find files
@@ -78,5 +76,9 @@
 
     # other
     discord
+    
+    # Starship
+    starship # prompt
+    
   ];
 }

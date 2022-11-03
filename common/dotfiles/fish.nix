@@ -27,12 +27,12 @@
     # Set up Nix environment
     set -x NIX_PATH nixpkgs=${pkgs.path}:$NIX_PATH:$HOME/.nix-defexpr/channels
     export NIX_PATH=$HOME/.nix-defexpr/channels:$NIX_PATH
-    
-    # run pywal
-    # wal -i ~/Pictures/Webcam/background-photo.jpg
-    
+        
     export DOTFILES=$HOME/.config/nixpkgs/common/dotfiles
     export EDITOR=/usr/bin/nvim
+  
+    # initiate starship
+    starship init fish | source
     '';
     shellAliases = {
       # Shell Abbreviations

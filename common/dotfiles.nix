@@ -17,6 +17,9 @@
 
   # kitty config
   home.file.".config/kitty/".source = ./dotfiles/kitty;
+  
+  # Rclone config
+  home.file.".config/rclone/".source = ./dotfiles/rclone;
 
   # Git config
   programs.git = {
