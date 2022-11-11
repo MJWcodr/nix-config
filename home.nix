@@ -10,7 +10,7 @@
   # imports
   imports = [ 
     ./common/dotfiles.nix
-    ./mjw-desktop/packages.nix
+    ./mjw0/packages.nix
   ];
 
   # This value determines the Home Manager release that your
