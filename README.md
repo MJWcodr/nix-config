@@ -1,17 +1,29 @@
 # nix-config
-My Nix Configuration
+My Nix Configuration using Home Manager
 
-## Usage with home-manager
+## Installation of Home Manager
 
-**install nix and home-manager**
+### Non NixOs
 
 ```bash
-curl -L https://nixos.org/nix/install | sh # install nix
-nix-channel --add # add nix channels
-export NIX_PATH=$HOME/.nix-defexpr/channels:/nix/var/nix/profiles/per-user/root/channels${NIX_PATH:+:$NIX_PATH} # add nix channels to path
+
+# First install the nix package Manager
+curl -L https://nixos.org/nix/install | sh # Install Home Manager
+
+# Add Home Manager to Nix Channels
+nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz # add home manager nix channel
+export NIX_PATH=$HOME/.nix-defexpr/channels:/nix/var/nix/profiles/per-user/root/channels${NIX_PATH:+:$NIX_PATH} # export NIX_PATH
+
+# Install Home manager
 nix-channel --update # update nix channels
 nix-env -iA nixpkgs.home-manager # install home-manager
 ```
+
+### NixOS
+
+
+
+### Nix Darwin
 
 **clone this repo**
 

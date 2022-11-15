@@ -21,6 +21,12 @@
   # Rclone config
   home.file.".config/rclone/".source = ./dotfiles/rclone;
 
+  # Hypr config
+  home.file.".config/hypr/".source = ./dotfiles/hypr;
+
+  # Waybar config
+  home.file.".config/waybar/".source = ./dotfiles/waybar;
+
   # Git config
   programs.git = {
     enable = true;

@@ -1,0 +1,14 @@
+[Unit]
+Description=Cryptdrive Service
+After=network.target
+Before=nextcloud-web.service
+
+[Service]
+ExecStart=rclone mount cryptdrive:  ~/Cryptdrive --vfs-cache-mode=full --allow-other --buffer-size 32M --config /home/matthias/.config/rclone/rclone.conf --password-command "pass rclone/config_password" &
+Type=notify
+Restart=always
+
+
+[Install]
+WantedBy=default.target
+RequiredBy=network.target

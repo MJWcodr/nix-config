@@ -11,6 +11,7 @@
   imports = [ 
     ./common/dotfiles.nix
     ./mjw-desktop/packages.nix
+   #  ./mjw-desktop/services.nix
   ];
 
   # This value determines the Home Manager release that your

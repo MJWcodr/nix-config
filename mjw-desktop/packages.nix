@@ -79,6 +79,5 @@
     
     # Starship
     starship # prompt
-    
   ];
 }

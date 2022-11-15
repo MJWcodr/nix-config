@@ -92,11 +92,11 @@ return packer.startup(function(use)
   use({
   'projekt0n/github-nvim-theme',
 	config = function()
-	require('github-theme').setup({
-	})
-	end
+	  require('github-theme').setup({
+	  })
+	  end
   })
-
+ 
   -- Setup nvim tree
   use "kyazdani42/nvim-tree.lua" -- A file explorer for Neovim
   require("nvim-tree").setup()

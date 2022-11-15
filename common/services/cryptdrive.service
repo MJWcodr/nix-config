@@ -1,0 +1,7 @@
+[Unit]
+Description=My demo application
+
+[Service]
+ExecStart=rclone mount cryptdrive:  ~/Cryptdrive --vfs-cache-mode=full --allow-other --buffer-size 32M --config /home/matthias/.config/rclone/rclone.conf --password-command "pass rclone/config_password"
+Type=notify
+Restart=always
