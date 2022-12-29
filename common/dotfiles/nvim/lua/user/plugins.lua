@@ -135,13 +135,13 @@ return packer.startup(function(use)
   use 'ray-x/lsp_signature.nvim' -- Show function signature
   use 'ray-x/guihua.lua' -- float window manager
   require('go').setup()
-    -- Autoformat Go
-    vim.cmd([[
-      augroup gofmt
-        autocmd!
-        autocmd BufWritePre *.go :silent! lua require('go.format').gofmt()
-      augroup END
-    ]])
+  --  -- Autoformat Go
+  --  vim.cmd([[
+  --    augroup gofmt
+  --      autocmd!
+  --      autocmd BufWritePre *.go :silent! lua require('go.format').gofmt()
+  --    augroup END
+  --  ]])
 
   
   -- After packer
