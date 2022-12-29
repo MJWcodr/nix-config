@@ -18,7 +18,6 @@
     unzip # unzip
     neovim rclone # cloud storage
     croc # file transfer
-    syncthing # sync files between devices
     fd # find files
     ripgrep # grep replacement
     fzf # fuzzy finder
